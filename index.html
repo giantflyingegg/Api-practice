@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API practice</title>
+</head>
+<body>
+    <h1>Postcode Lookup</h1>
+    <div id="input">
+        <input type="text" id="postcode" placeholder="Enter postcode">
+        <button onclick="lookupPostcode()">Lookup</button>
+    </div>
+    <div id="result-container">
+        <div class="result" id="region">Region
+            <textarea name="" id="regResult" cols="40" rows="1"></textarea>
+        </div>
+        <div class="result" id="pfa">Police Force Area
+            <textarea name="" id="pfaResult" cols="40" rows="1"></textarea>
+        </div>
+        <div class="result" id="latitude">Latitude
+            <textarea name="" id="latResult" cols="40" rows="1"></textarea>
+        </div>
+        <div class="result" id="longitude">Longitude
+            <textarea name="" id="lonResult" cols="40" rows="1"></textarea>
+        </div>
+    </div>
+    <script src="js/index.js" defer></script>
+</body>
+</html>
