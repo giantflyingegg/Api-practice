@@ -1,8 +1,10 @@
 async function lookupPostcode() {
     //get postcode from input field
     const postcode = document.getElementById('postcode').value;
+
+    //api call
     try {
-        const response = await fetch(`http://localhost:3000/api/postcode?postcode=${postcode}`);
+        const response = await fetch(`https://api-practice-pixw.onrender.com/api/postcode?postcode=${postcode}`);
         const data = await response.json();
 
         //extract data from response
