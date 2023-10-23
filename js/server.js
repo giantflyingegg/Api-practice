@@ -18,6 +18,17 @@ app.get('/api/postcode', async (req, res) => {
   }
 });
 
+app.get('/api/crime', async (req, res) => {
+    try {
+      const { date, lat, lng } = req.query;
+      const response = await axios.get(`https://data.police.uk/api/crimes-at-location?date=${date}&lat=${lat}&lng=${lng}`);
+      res.json(response.data);
+    } catch (error) {
+      console.error('Error fetching crime data', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
