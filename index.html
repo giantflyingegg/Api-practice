@@ -9,7 +9,8 @@
 <body>
     <h1>Postcode Lookup</h1>
     <div id="input">
-        <input type="text" id="postcode" placeholder="Enter postcode">
+        <input type="text" id="postcode" placeholder="Enter postcode" required>
+        <input type="month" id="dateSelector" name="month" placeholder="Enter date as YYYY-MM" required>
         <button onclick="lookupPostcode()">Lookup</button>
     </div>
     <div id="result-container">
