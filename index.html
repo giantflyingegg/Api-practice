@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>API practice</title>
 </head>
 <body>
-    <h1>Postcode Lookup</h1>
-    <div id="input">
+    <h1>Police api</h1>
+    <section id="input-section" class="input-container">
+        <h2>Search</h2>
         <input type="text" id="postcode" placeholder="Enter postcode" required>
         <input type="month" id="dateSelector" name="month" placeholder="Enter date as YYYY-MM" required>
         <button onclick="lookupPostcode()">Lookup</button>
-    </div>
-    <div id="result-container">
-        <div class="result" id="region">Region
-            <textarea name="" id="regResult" cols="40" rows="1"></textarea>
+    </section>
+    <section id="result-container" class="result-container">
+        <h2>Postcode data</h2>
+        <div class="result" id="region">
+            <label for="regResult">Region</label>
+            <textarea id="regResult" cols="40" rows="1"></textarea>
         </div>
-        <div class="result" id="pfa">Police Force Area
-            <textarea name="" id="pfaResult" cols="40" rows="1"></textarea>
+        <div class="result" id="pfa">
+            <label for="pfaResult">Police Force Area</label>
+            <textarea id="pfaResult" cols="40" rows="1"></textarea>
         </div>
-        <div class="result" id="latitude">Latitude
-            <textarea name="" id="latResult" cols="40" rows="1"></textarea>
+        <div class="result" id="latitude">
+            <label for="latResult">Latitude</label>
+            <textarea id="latResult" cols="40" rows="1"></textarea>
         </div>
-        <div class="result" id="longitude">Longitude
-            <textarea name="" id="lonResult" cols="40" rows="1"></textarea>
+        <div class="result" id="longitude">
+            <label for="lonResult">Longitude</label>
+            <textarea id="lonResult" cols="40" rows="1"></textarea>
         </div>
-    </div>
-    <h2>Crime data</h2>
-    <div>
-        <div id="crimeData" ></div>
-    </div>
+    </section>
+    <section id="crime-data-section" class="crime-data-section">
+        <h2>Crime data</h2>
+        <div id="crimeData"></div>
+    </section>
     <script src="js/index.js" defer></script>
 </body>
 </html>
